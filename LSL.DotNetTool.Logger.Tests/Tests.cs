@@ -37,7 +37,7 @@ public class Tests
         test.LogAllLevels();
 
         // Assert
-        writer.ToString().Should().Be(
+        writer.ToString().ReplaceLineEndings().Should().Be(
             """
             [INF] Trace enabled: True
             [CRT] als
@@ -47,7 +47,7 @@ public class Tests
             [TRC] als
             [WRN] als
 
-            """
+            """.ReplaceLineEndings()
         );
     }
 
