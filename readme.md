@@ -4,4 +4,4 @@
 
 # LSL.DotNetTool.Logger
 
-Provide package documentation here.
+An internal package for providing a logger for the [LSL.DotNetTool.Templace](https://github.com/alunacjones/LSL.DotNetTool.Template/tree/master) repository.
