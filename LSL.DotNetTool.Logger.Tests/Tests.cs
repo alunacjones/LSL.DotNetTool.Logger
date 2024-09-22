@@ -1,6 +1,7 @@
 using System.IO;
 using FluentAssertions;
 using LSL.AbstractConsole.ServiceProvider;
+using LSL.AppVeyor.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -37,7 +38,7 @@ public class Tests
         test.LogAllLevels();
 
         // Assert
-        writer.ToString().ReplaceLineEndings().Should().Be(
+        writer.ToString().Should().Be(
             """
             [INF] Trace enabled: True
             [CRT] als
@@ -47,7 +48,7 @@ public class Tests
             [TRC] als
             [WRN] als
 
-            """.ReplaceLineEndings()
+            """.FixStringConstantNewLines()
         );
     }
 
